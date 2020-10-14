@@ -82,9 +82,9 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
 
   Final Rendered Scene
 
-  ![14_donut_coffee5](C:\Users\Administrator\OneDrive\Pitt Terms\10-2020Fall\UCB Research\Ray Tracing Project\Project Documents\14_donut_coffee5.png)
+  ![14_donut_coffee5](/14_donut_coffee5.png)
 
-  GIF animation:![final-composition0001-0060](C:\Users\Administrator\OneDrive\Pitt Terms\10-2020Fall\UCB Research\Ray Tracing Project\Project Documents\final-composition0001-0060.gif)
+  GIF animation:![final-composition0001-0060](/final-composition0001-0060.gif)
 
 ### Week 2 (10/9/2020 - 10/14/2020)
 
@@ -112,7 +112,7 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
     * The plate of the grilled fish
 * Reference
 
-![image-20201014030224880](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201014030224880.png)
+![image-20201014030224880](/CU Fish/Reference Pictures/fish (2).jpg)
 
 #### Takeaways for this week
 
