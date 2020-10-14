@@ -3,4 +3,4 @@
 
 
 
-Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project Documents/Project Logs.md) under the folder named "[Project Documentation](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/tree/master/Project%20Documents)"
+Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project%20Documents/Project%20Logs.md) under the folder named "[Project Documentation](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/tree/master/Project%20Documents)"
