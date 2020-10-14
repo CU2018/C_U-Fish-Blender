@@ -4,6 +4,8 @@ Siyu Zhang
 
 Start Time: 2020.10.1
 
+[TOC]
+
 ## Introduction
 
 This documentation records the development process of Siyu's Ray Tracing Project with Blender, including weekly progress, references and implementation details in the project.
@@ -21,8 +23,12 @@ This  individual Blender project designed for demonstrating the strength ray tra
     * [Assessment Management](https://gumroad.com/l/asset_management)
     *  [3D Viewport Pie](https://docs.blender.org/manual/en/2.90/addons/interface/viewport_pies.html)
     * [GoB](https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/Import-Export/GoB_ZBrush_import_export/)
+  
 * Python 3
+
 * ZBrush
+
+  
 
 ## References
 
@@ -62,7 +68,11 @@ Peter Shirley – Ray Tracing Book Series
 
 [CUDA programming](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) 
 
+[Blender's Directory Layout](https://docs.blender.org/manual/en/2.90/advanced/blender_directory_layout.html)
+
 [Blender 2.90.1 Python API Documentation](https://docs.blender.org/api/current/index.html)
+
+
 
 
 
@@ -90,7 +100,7 @@ Peter Shirley – Ray Tracing Book Series
 
   Final Rendered Scene
 
-  ![embedded_images/14_donut_coffee5](14_donut_coffee5.png)
+  ![14_donut_coffee5](embedded_images/14_donut_coffee5.png)
 
   GIF animation:
   
@@ -156,15 +166,22 @@ Peter Shirley – Ray Tracing Book Series
 
 
 
+## Blender's Directory Layout
+
+[Blender's Directory Layout](https://docs.blender.org/manual/en/2.90/advanced/blender_directory_layout.html)
+
+* /datafiles: foundational codes of Blender: C/C++
+* /python: python version 3 (3.7.0)
+* /scripts/addons: all downloaded addons locate here
+* /scripts/modules: all core API and utility functions for other scripts to import
+*  /scripts/presets: scripts that would be executed for all blender projects
+* /scripts/templates_py && /scripts/templates_osl: templates for scripting in python and OSL
+
+
+
 ## Python Scripting in Blender
 
 This section records notes of Python scripting in Blender, including python blender APIs related to Add-ons.
-
-
-
-## Cycles Engine Structure and Path/Ray Tracing Analysis
-
-This sections focuses on analysis of [Cycles Engine source code](https://developer.blender.org/diffusion/B/browse/master/intern/cycles/) which is an open-source and powerful renderer in Blender. [Cycles](https://www.cycles-renderer.org/) is a physically based production renderer developed by the [Blender project](https://www.blender.org/).
 
 [Blender 2.90.1 Python API Documentation](https://docs.blender.org/api/current/index.html)
 
@@ -174,13 +191,137 @@ Structure:
 
 * app
 * context
-* data
+* data 
 * msgbus
-* ops  -- integration
+* ops 
 * path
 * props
-* types  -- animation
+* types 
 * utils
 
 ![images](/embedded_images/bpy.png)
+
+![image-20201014083417125](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201014083417125.png)
+
+#### bpy.data
+
+* access data blocks
+* collections
+* access attributes
+* data creation/removal
+* custom properties
+
+#### bpy.context
+
+* access data directly by name or as a list, it’s more common to operate on the **user’s selection**
+* read-only
+
+#### byp.ops
+
+* tools: e.g. delete objects ``bpy.ops.object.delete(use_global=False)``
+* inspector: e.g. poll()
+
+#### byp.types
+
+* native types: python
+* internal types: Blender structures
+* mathutils types: matrix, etc.
+
+#### Animation: 
+
+1. byp.context.object.keyframes_insert()
+2. byp.context.object.animation_data_create()
+
+
+
+### Python API Overview
+
+* Python is integrated / embedded in Blender
+
+* Script loading: 
+
+  * usually by importing as a module
+  * can be used multiple times by importing
+  * extend Blender by registering classes
+
+* run scripts directly in Python:
+
+  * in Blender console
+  * run in text editor by pressing **Run Script**
+  * ``blender --python /home/me/my_script.py``
+
+* Run as module
+
+  * import ...
+  * in text editor and tick "Register" option, will load with blend file
+  * add to addons folder
+  * add to startup folders
+
+* Add-ons:
+
+  * add-ons must contain a bl_info variable which Blender uses to read metadata such as name, author, category and URL
+  * must register and unregister
+
+* integration through classes:
+
+  * allowed integrations for: bpy.types.Panel, Menu, Operator, PropertyGroup, KeyingSet, RenderEngine
+
+  * intentionally limited: advanced features such as mesh modifiers, object types, or shader nodes,
+
+    * C/C++ must be used
+
+  * ``bl_idname``: name can be called in python of Blender
+
+    * ``bl_label``: name shown to users
+
+  * ```python
+    import bpy
+    class SimpleOperator(bpy.types.Operator):
+        bl_idname = "object.simple_operator"
+        bl_label = "Tool Name"
+    
+        def execute(self, context):
+            print("Hello World")
+            return {'FINISHED'}
+    
+    bpy.utils.register_class(SimpleOperator)
+    
+    ```
+
+    * So once the class is registered with Blender, instancing the class and calling the functions is left up to Blender. In fact you **cannot instance these classes from the script** as you would expect with most Python API’s.
+
+* Registration
+
+  * Module Registration (loaded at startup require register and unregister functions)
+
+  * ```python
+    import bpy
+    
+    class SimpleOperator(bpy.types.Operator):
+        """ See example above """
+    
+    def register():
+        bpy.utils.register_class(SimpleOperator)
+    
+    def unregister():
+        bpy.utils.unregister_class(SimpleOperator)
+    
+    if __name__ == "__main__":
+        register()
+    ```
+
+  * 
+
+
+
+## Cycles Render Engine Structure and Path/Ray Tracing Analysis
+
+This sections focuses on analysis of [Cycles Render Engine source code](https://developer.blender.org/diffusion/B/browse/master/intern/cycles/) which is an open-source and powerful renderer in Blender. [Cycles](https://www.cycles-renderer.org/) is a physically based production renderer developed by the [Blender project](https://www.blender.org/).
+
+## Issues / Problems Encountered
+
+### "C_U-Fish.blend" file takes a while to be started up
+
+* Reason: looks like you have a bad addon ([Assessment Management](https://gumroad.com/l/asset_management) is not really compatible with 2.90 version)
+* Solution: disable [Assessment Management](https://gumroad.com/l/asset_management) and try again
 
