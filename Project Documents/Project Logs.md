@@ -1,12 +1,16 @@
 # Ray Tracing Project with Blender
 
-Siyu Zhang                         Start Time: 2020.10.1
+Siyu Zhang                         
+
+Start Time: 2020.10.1
 
 ## Introduction
 
 This documentation records the development process of Siyu's Ray Tracing Project with Blender, including weekly progress, references and implementation details in the project.
 
 ### Goal of this Project
+
+This  individual Blender project designed for demonstrating the strength ray tracing and customize a set of attributes of [Cycles Engine](https://www.cycles-renderer.org/) in Blender particular for food rendering.
 
 ### Technologies and software used in this project
 
@@ -16,11 +20,13 @@ This documentation records the development process of Siyu's Ray Tracing Project
     * [MACHIN3tools](https://blendermarket.com/products/MACHIN3tools)
     * [Assessment Management](https://gumroad.com/l/asset_management)
     *  [3D Viewport Pie](https://docs.blender.org/manual/en/2.90/addons/interface/viewport_pies.html)
-    * 
+    * [GoB](https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/Import-Export/GoB_ZBrush_import_export/)
 * Python 3
 * ZBrush
 
 ## References
+
+### Ray Tracing Algorithms
 
 Ray tracing Algorithms
 
@@ -32,8 +38,6 @@ Ray tracing Algorithms
 
 Ray tracing on GPU: 
 
- 
-
 [http://on-demand.gputechconf.com/gtc-eu/2018/pdf/e8527-real-time-ray-tracing-with-nvidia-rtx.pdf](https://nam05.safelinks.protection.outlook.com/?url=http%3A%2F%2Fon-demand.gputechconf.com%2Fgtc-eu%2F2018%2Fpdf%2Fe8527-real-time-ray-tracing-with-nvidia-rtx.pdf&data=02|01|SIZ24%40pitt.edu|22e44fabedc94cd002da08d7d446686e|9ef9f489e0a04eeb87cc3a526112fd0d|1|0|637211271167367533&sdata=XS5F2TVsdJSei1sTXfxh%2FnaSq0zYcY76HiM3h%2BVNG8A%3D&reserved=0) 
 
 [https://raytracing-docs.nvidia.com/optix6/whitepaper/nvidia_optix_TOG_v29_n4.pdf](https://nam05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fraytracing-docs.nvidia.com%2Foptix6%2Fwhitepaper%2Fnvidia_optix_TOG_v29_n4.pdf&data=02|01|SIZ24%40pitt.edu|22e44fabedc94cd002da08d7d446686e|9ef9f489e0a04eeb87cc3a526112fd0d|1|0|637211271167377493&sdata=q%2Fzdc3Mlw3MHJZaS9mjje%2F28uyKaRcuY3t3o2MIAMeA%3D&reserved=0) 
@@ -42,21 +46,25 @@ Ray tracing on GPU:
 
  
 
-CUDA programming 
-
-[https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html](https://nam05.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.nvidia.com%2Fcuda%2Fcuda-c-programming-guide%2Findex.html&data=02|01|SIZ24%40pitt.edu|22e44fabedc94cd002da08d7d446686e|9ef9f489e0a04eeb87cc3a526112fd0d|1|0|637211271167387444&sdata=nS%2Fw3l5aEr3F6f2iG4aSpZbl6PirGKVU6MFLmdKkfpM%3D&reserved=0) 
-
- 
-
 Peter Shirley – Ray Tracing Book Series 
 
-https://github.com/RayTracing/raytracing.github.io/ 
+[Ray Tracing Book Series Github](https://github.com/RayTracing/raytracing.github.io/) 
 
-https://raytracing.github.io/books/RayTracingInOneWeekend.html 
+[Ray Tracing in One Weekend](https://raytracing.github.io/books/RayTracingInOneWeekend.html) 
 
-https://raytracing.github.io/books/RayTracingTheNextWeek.html 
+[Ray Tracing The Next Week](https://raytracing.github.io/books/RayTracingTheNextWeek.html) 
 
-https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html 
+[Ray Tracing The Rest of Your Life](https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html )
+
+
+
+### Other Resources
+
+[CUDA programming](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) 
+
+[Blender 2.90.1 Python API Documentation](https://docs.blender.org/api/current/index.html)
+
+
 
 ## Weekly Progress
 
@@ -82,11 +90,13 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
 
   Final Rendered Scene
 
-  ![14_donut_coffee5](14_donut_coffee5.png)
+  ![embedded_images/14_donut_coffee5](14_donut_coffee5.png)
 
   GIF animation:
   
-  ![final-composition0001-0060](final-composition0001-0060.gif)
+  ![final-composition0001-0060](embedded_images/final-composition0001-0060.gif)
+
+
 
 ### Week 2 (10/9/2020 - 10/14/2020)
 
@@ -110,15 +120,16 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
 * Material and Texture representations:
   * Liquid: requires plenty of transmission and reflection lighting rays to look more realistic
     * Soup in the plate of grilled fish
+    * boiled soup -- fluid dynamics
   * Glossy metal:
     * The plate of the grilled fish
 * Reference
 
-![image-20201014030224880](fish (2).jpg)
+![image-20201014030224880](embedded_images/fish (2).jpg)
 
 #### Takeaways for this week
 
-* Blender Add-on programming
+* Blender Add-on scripting (Python)
 * Built a small add-on tool for recording operation histories and auto-save UVs
 
 #### Plan for the next week
@@ -127,11 +138,49 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
   * [Finished / In progress] Donuts and Coffee (probably need to change the beverage later - coke would be better?)
   * [In progress] Grilled Fish modeling
 
+
+
 ### Week 3 (10/15/2020 - 10/22/2020)
+
+
 
 ### Week 4 (10/23/2020 - 10/29/2020)
 
+
+
 ### Week 5 (10/30/2020 - 11/5/2020)
 
+
+
 ### Week 6 (11/6/2020 - 11/12/2020)
+
+
+
+## Python Scripting in Blender
+
+This section records notes of Python scripting in Blender, including python blender APIs related to Add-ons.
+
+
+
+## Cycles Engine Structure and Path/Ray Tracing Analysis
+
+This sections focuses on analysis of [Cycles Engine source code](https://developer.blender.org/diffusion/B/browse/master/intern/cycles/) which is an open-source and powerful renderer in Blender. [Cycles](https://www.cycles-renderer.org/) is a physically based production renderer developed by the [Blender project](https://www.blender.org/).
+
+[Blender 2.90.1 Python API Documentation](https://docs.blender.org/api/current/index.html)
+
+### bpy
+
+Structure:
+
+* app
+* context
+* data
+* msgbus
+* ops  -- integration
+* path
+* props
+* types  -- animation
+* utils
+
+![images](/embedded_images/bpy.png)
 
