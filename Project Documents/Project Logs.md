@@ -112,7 +112,7 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
     * The plate of the grilled fish
 * Reference
 
-![image-20201014030224880](CU Fish/Reference Pictures/fish (2).jpg)
+![image-20201014030224880](fish (2).jpg)
 
 #### Takeaways for this week
 
