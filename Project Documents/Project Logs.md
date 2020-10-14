@@ -84,7 +84,9 @@ https://raytracing.github.io/books/RayTracingTheRestOfYourLife.html
 
   ![14_donut_coffee5](14_donut_coffee5.png)
 
-  GIF animation:![final-composition0001-0060](final-composition0001-0060.gif)
+  GIF animation:
+  
+  ![final-composition0001-0060](final-composition0001-0060.gif)
 
 ### Week 2 (10/9/2020 - 10/14/2020)
 
