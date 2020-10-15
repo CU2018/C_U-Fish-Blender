@@ -307,10 +307,118 @@ Structure:
         bpy.utils.unregister_class(SimpleOperator)
     
     if __name__ == "__main__":
+        register()  # only for testing
+    ```
+
+    * register won’t re-run when a new blend-file is loaded since `__main__` is reserved for direct execution
+
+* Inter-Class Dependencies
+
+  * group your own settings together
+
+  * have to co-exist with other scripts
+
+  * need to define classes
+
+  * custom properties groups are themselves classes which need to be registered
+
+  * ```python
+    # Create new property
+    # bpy.data.materials[0].my_custom_props.my_float
+    import bpy
+    
+    class MyMaterialProps(bpy.types.PropertyGroup):
+        my_float: bpy.props.FloatProperty()
+    
+    def register():
+        bpy.utils.register_class(MyMaterialProps)
+        bpy.types.Material.my_custom_props: bpy.props.PointerProperty(type=MyMaterialProps)
+    
+    def unregister():
+        del bpy.types.Material.my_custom_props
+        bpy.utils.unregister_class(MyMaterialProps)
+    
+    if __name__ == "__main__":
         register()
     ```
 
-  * 
+  * The lower most class needs to be registered first and that `unregister()` is a mirror of `register()`.
+
+  * ```python
+    # Create new property group with a sub property
+    # bpy.data.materials[0].my_custom_props.sub_group.my_float
+    import bpy
+    
+    class MyMaterialSubProps(bpy.types.PropertyGroup):
+        my_float: bpy.props.FloatProperty()
+    
+    class MyMaterialGroupProps(bpy.types.PropertyGroup):
+        sub_group: bpy.props.PointerProperty(type=MyMaterialSubProps)
+    
+    def register():
+        bpy.utils.register_class(MyMaterialSubProps)
+        bpy.utils.register_class(MyMaterialGroupProps)
+        bpy.types.Material.my_custom_props: bpy.props.PointerProperty(type=MyMaterialGroupProps)
+    
+    def unregister():
+        del bpy.types.Material.my_custom_props
+        bpy.utils.unregister_class(MyMaterialGroupProps)
+        bpy.utils.unregister_class(MyMaterialSubProps)
+    
+    if __name__ == "__main__":
+        register()
+    ```
+
+* Manipulating Classes
+
+  * Properties can be added and removed as Blender runs, normally done on register or unregister but for some special cases it may be useful to **modify types as the script runs**.
+
+    ```python
+    # add a new property to an existing type
+    bpy.types.Object.my_float: bpy.props.FloatProperty()
+    # remove
+    del bpy.types.Object.my_float
+    ```
+
+    it equivalent to:
+
+    ```python
+    class MyPropGroup(bpy.types.PropertyGroup):
+        my_float: bpy.props.FloatProperty()
+    ```
+
+* **Dynamic**  class definition
+
+  * an external render engines shader definitions could contain the specifier for data
+
+  * could be useful to define them as **types** and remove them on the fly
+
+    ```python
+    for i in range(10):
+        idname = "object.operator_%d" % i
+    
+        def func(self, context):
+            print("Hello World", self.bl_idname)
+            return {'FINISHED'}
+    
+        opclass = type("DynOp%d" % i,
+                       (bpy.types.Operator, ),
+                       {"bl_idname": idname, "bl_label": "Test", "execute": func},
+                       )
+        bpy.utils.register_class(opclass)
+    ```
+
+    * `type()` is called to define the class. This is an alternative syntax for class creation in Python, better suited to constructing classes **dynamically**.
+
+### Reference API Usage
+
+* interlinking data types which have an auto-generated reference API
+*  [`bpy.types`](https://docs.blender.org/api/current/bpy.types.LayerObjects.html#module-bpy.types) stores types accessed via [`bpy.context`](https://docs.blender.org/api/current/bpy.context.html#module-bpy.context)
+* ID Data:
+  * access from``bpy.data``
+  * ``bpy.data`` contains ``bpy.context``, but ``bpy.context`` is more convenient
+  * can add object to another blend file by ID data
+  * has garbage-collection system
 
 
 
@@ -320,7 +428,7 @@ This sections focuses on analysis of [Cycles Render Engine source code](https://
 
 ## Issues / Problems Encountered
 
-### "C_U-Fish.blend" file takes a while to be started up
+### [Solved]"C_U-Fish.blend" file takes a while to be started up
 
 * Reason: looks like you have a bad addon ([Assessment Management](https://gumroad.com/l/asset_management) is not really compatible with 2.90 version)
 * Solution: disable [Assessment Management](https://gumroad.com/l/asset_management) and try again
