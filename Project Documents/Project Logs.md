@@ -227,7 +227,7 @@ Structure:
 * internal types: Blender structures
 * mathutils types: matrix, etc.
 
-#### Animation: 
+#### Animation
 
 1. byp.context.object.keyframes_insert()
 2. byp.context.object.animation_data_create()
@@ -410,6 +410,8 @@ Structure:
 
     * `type()` is called to define the class. This is an alternative syntax for class creation in Python, better suited to constructing classes **dynamically**.
 
+  
+
 ### Reference API Usage
 
 * interlinking data types which have an auto-generated reference API
@@ -419,12 +421,95 @@ Structure:
   * ``bpy.data`` contains ``bpy.context``, but ``bpy.context`` is more convenient
   * can add object to another blend file by ID data
   * has garbage-collection system
+* move mouse over a button and ``ctrl+c`` and then paste it to console in Blender, you will see the functions that this button called if pressed
+* show all operators: only reports operators with the REGISTER option enabled
+  * ``bpy.app.debug_wm=True``
+* Use External Tools
+  * Run Gimp in batch mode to execute custom scripts for advanced image processing.
+  * Write out 3D models to use external mesh manipulation tools and read back in the results.
+  * Convert files into recognizable formats before reading.
 
+* quote usage:
 
+  * ' ': 'png'
+  * "": "path"
+
+* User Interface Layout
+
+  * layout.row()
+  * layout.column()
+  * layout.split()
+
+* Script Efficiency
+
+  * Modify list: 
+
+    * ``polygons = [p for p in mesh.polygons if len(p.vertices) != 3] is **FASTER**``
+
+  * Add list items: 
+
+    * ``my_list.extend([a,b,c, ...])``
+
+  * reverse a list: 
+
+    * ``some_reversed_list = solme+list[::-1]``
+
+  * remove list items: 
+
+    * ```python
+      pop_index = 5
+      
+      # swap so the pop_index is last.
+      my_list[-1], my_list[pop_index] = my_list[pop_index], my_list[-1]
+      
+      # remove last item (pop_index)
+      my_list.pop()
+      ```
+
+  * avoid copying list:
+
+    * This is generally faster since there is no re-assignment and no list duplication:
+
+      ```python
+      some_list_func(vec)
+      ```
+
+    * passing a sliced list makes a copy of the list in Python memory:
+
+    ```python
+    >>> foobar(my_list[:])
+    ```
+
+    If my_list was a large array containing 10,000’s of items, a copy could use a lot of extra memory.
+
+  * Value Comparison
+    * Python has two ways to compare values `a == b` and `a is b`, the difference is that `==` may run the objects comparison function `__cmp__()` whereas `is` compares identity, this is, that both variables reference the same item in memory.
+    * In cases where you know you are checking for the same value which is referenced from multiple places, `is` is faster.
+
+  * Parsing Numbers
+
+    * Use `float(string)` rather than `eval(string)`, if you know the value will be an int then `int(string)`, `float()` will work for an int too but it is faster to read ints with `int()`.
+
+  * Time Your Code
+
+    * While developing a script it is good to time it to be aware of any changes in performance, this can be done simply:
+
+    ```python
+    import time
+    time_start = time.time()
+    
+    # do something...
+    
+    print("My Script Finished: %.4f sec" % (time.time() - time_start))
+    ```
+
+    
 
 ## Cycles Render Engine Structure and Path/Ray Tracing Analysis
 
 This sections focuses on analysis of [Cycles Render Engine source code](https://developer.blender.org/diffusion/B/browse/master/intern/cycles/) which is an open-source and powerful renderer in Blender. [Cycles](https://www.cycles-renderer.org/) is a physically based production renderer developed by the [Blender project](https://www.blender.org/).
+
+
 
 ## Issues / Problems Encountered
 
