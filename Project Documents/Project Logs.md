@@ -12,7 +12,7 @@ This documentation records the development process of Siyu's Ray Tracing Project
 
 ### Goal of this Project
 
-This  individual Blender project designed for demonstrating the strength ray tracing and customize a set of attributes of [Cycles Engine](https://www.cycles-renderer.org/) in Blender particular for food rendering.
+This individual Blender project designed for illustrating the strength of ray tracing and customizing a set of attributes in Blender (including customized texture nodes, shader nodes, and attributes of [Cycles Engine](https://www.cycles-renderer.org/)) particularly for food rendering.
 
 ### Technologies and software used in this project
 
@@ -136,6 +136,10 @@ Peter Shirley – Ray Tracing Book Series
 * Reference
 
 ![image-20201014030224880](embedded_images/fish (2).jpg)
+
+* Modeling for this week: Finished basic model of the plate
+
+  ![image-20201014030224880](embedded_images/plate1.png)
 
 #### Takeaways for this week
 

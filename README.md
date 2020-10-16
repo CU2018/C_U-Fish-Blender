@@ -1,5 +1,5 @@
 # C_U-Fish-Blender-Ray-Tracing
- This repo contains all of the files for my individual Blender project designed for showing the strength of Ray Tracing and customize a set of attributes in Cycles Render Engine particular for food rendering.
+ This repo contains all of the files for my individual Blender project designed for illustrating the strength of ray tracing and customizing a set of attributes in Blender (including customized texture nodes, shader nodes, and attributes of [Cycles Engine](https://www.cycles-renderer.org/)) particularly for food rendering..
 
 
 
