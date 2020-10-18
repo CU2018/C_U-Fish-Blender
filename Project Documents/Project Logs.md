@@ -170,6 +170,101 @@ Peter Shirley – Ray Tracing Book Series
 
 
 
+
+
+## Blender Modeling Basics
+
+* Start from a plane
+
+* Frequently used:
+
+  * Apply All: Ctrl + A and select Apply All to make the scale and transformation to 1 and 0
+
+  * Bevel: Ctrl + B [before Bevel need to "Apply All"] 
+
+    * offset 
+    * percentage
+
+  * Loop Cut and Slide: Ctrl + R
+
+  * Mirror  (Modifier): Ctrl + Alt + X/Y/Z
+
+    * mirror according to origin
+
+  * Extrude: E
+
+    * Vertex -> Edge -> Face
+
+  * Snap:
+
+    * ![snap](/embedded_images/snap.png)
+    * Snap to Vertex/Edge/Face
+    * Toggle the "Align Rotation to Target" to let it change rotation automatically according to the normal
+
+  * Proportional Editing Objects
+
+    * ![proportional](/embedded_images/proportional.png)
+
+  * Simple Deform (Modifier)
+
+  * Displace (Modifier)
+
+    * creating the texture displace (solid alcohol)
+
+  * Join:
+
+    * Join objects together and make sure they are the same type
+
+    
+
+## Blender UV Editing Basics
+
+* Start from top to bottom
+
+* UV Sync Selection
+
+  * ![uv_sync](/embedded_images/uv_sync.png)
+
+* Projection From Front View
+
+  * ![UV_Project_from_front_view](/embedded_images/UV_Project_from_front_view.png)
+
+* Mark Seam
+
+  * In UV window, Ctrl + E
+  * ![mark_seam](/embedded_images/mark_seam.png)
+
+* Select all Vertex / Edge
+
+  * A
+
+* Unwrap
+
+  * U
+
+* For objects with mirror modifier, UV Editing first and then apply them
+
+* UV>Average Island Scale
+
+* UV>Pack Island
+
+  * arrange UVs
+
+  
+
+## ZBrush Operation Basics
+
+* Rotation: Left Click
+* View Lock: Shift + Left Click
+* Drag View: Alt + Left Click/Right Click
+* Zoom In/Out: Ctrl + Right Click
+* Size of brush: S
+* Mask: Ctrl + Left Click Select
+
+
+
+
+
 ## Blender's Directory Layout
 
 [Blender's Directory Layout](https://docs.blender.org/manual/en/2.90/advanced/blender_directory_layout.html)
@@ -521,4 +616,14 @@ This sections focuses on analysis of [Cycles Render Engine source code](https://
 
 * Reason: looks like you have a bad addon ([Assessment Management](https://gumroad.com/l/asset_management) is not really compatible with 2.90 version)
 * Solution: disable [Assessment Management](https://gumroad.com/l/asset_management) and try again
+
+### [Solved]Cannot join objects in the scene
+
+* Reason: the selected objects did not have the same type (one with a modifier and others didn't)
+* Solution: delete the object and duplicate another object to finish the join
+
+### [Unsolved]Cannot find checker image in Blender 2.9
+
+* Reason: the selected objects did not have the same type (one with a modifier and others didn't)
+* Solution: delete the object and duplicate another object to finish the join
 
