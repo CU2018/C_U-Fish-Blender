@@ -197,13 +197,13 @@ Peter Shirley – Ray Tracing Book Series
 
   * Snap:
 
-    * ![snap](/embedded_images/snap.png)
+    * ![snap](embedded_images/snap.png)
     * Snap to Vertex/Edge/Face
     * Toggle the "Align Rotation to Target" to let it change rotation automatically according to the normal
 
   * Proportional Editing Objects
 
-    * ![proportional](/embedded_images/proportional.png)
+    * ![proportional](embedded_images/proportional.png)
 
   * Simple Deform (Modifier)
 
@@ -232,16 +232,16 @@ Peter Shirley – Ray Tracing Book Series
 
 * UV Sync Selection
 
-  * ![uv_sync](/embedded_images/uv_sync.png)
+  * ![uv_sync](embedded_images/uv_sync.png)
 
 * Projection From Front View
 
-  * ![UV_Project_from_front_view](/embedded_images/UV_Project_from_front_view.png)
+  * ![UV_Project_from_front_view](embedded_images/UV_Project_from_front_view.png)
 
 * Mark Seam
 
   * In UV window, Ctrl + E
-  * ![mark_seam](/embedded_images/mark_seam.png)
+  * ![mark_seam](embedded_images/mark_seam.png)
 
 * Select all Vertex / Edge
 
@@ -323,7 +323,7 @@ Structure:
 * types 
 * utils
 
-![images](/embedded_images/bpy.png)
+![images](embedded_images/bpy.png)
 
 ![image-20201014083417125](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201014083417125.png)
 
