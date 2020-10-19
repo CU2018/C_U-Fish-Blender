@@ -215,6 +215,15 @@ Peter Shirley – Ray Tracing Book Series
 
     * Join objects together and make sure they are the same type
 
+  * Triangulate Faces: 
+
+    * Ctrl + T
+
+  * Cut:
+
+    * K
+    * with Ctrl stick to Center
+
     
 
 ## Blender UV Editing Basics
@@ -259,7 +268,23 @@ Peter Shirley – Ray Tracing Book Series
 * Drag View: Alt + Left Click/Right Click
 * Zoom In/Out: Ctrl + Right Click
 * Size of brush: S
-* Mask: Ctrl + Left Click Select
+* Rotation/Scale/Translate: W
+* Back to Brush: Q
+* Set brush keymap:  Ctrl + Alt and click on the brush then type the keys
+  * Move: 1
+  * Move Topology: 2
+  * Standard: 3
+  * ClayBuildUp: 4
+  * hPolish: 5
+  * Trim Curve: Ctrl + Shift
+  * Mask: Ctrl + Left Click Select
+* Draw PolyFrame: Shift + F
+* Auto Groups: Polygroups>Auto Groups
+* Select different group: Under W mode, press Ctrl and then left click
+* Reset Mesh Orientation: Under W mode, Alt and click reset button
+* Duplicate: Subtool > Dupilicate
+* DynaMesh: Geometry > DynaMesh
+* Decimation Master: Zplugin > Decimation Master
 
 
 
