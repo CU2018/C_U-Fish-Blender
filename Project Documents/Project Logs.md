@@ -224,6 +224,19 @@ Peter Shirley – Ray Tracing Book Series
     * K
     * with Ctrl stick to Center
 
+  * Shear:
+  
+    * Ctrl + Shift + Alt + S
+  
+  * Link Data:
+  
+    * select the objects that need to change first and then press shift to select the changed object 
+    * then ctrl + L to select the data type that want to apply
+  
+  * Flip (Normal)
+  
+    * Edit Mode -> Mesh -> Normal -> Flip
+  
     
 
 ## Blender UV Editing Basics
@@ -547,6 +560,7 @@ Structure:
   * has garbage-collection system
 * move mouse over a button and ``ctrl+c`` and then paste it to console in Blender, you will see the functions that this button called if pressed
 * show all operators: only reports operators with the REGISTER option enabled
+  
   * ``bpy.app.debug_wm=True``
 * Use External Tools
   * Run Gimp in batch mode to execute custom scripts for advanced image processing.
@@ -647,8 +661,13 @@ This sections focuses on analysis of [Cycles Render Engine source code](https://
 * Reason: the selected objects did not have the same type (one with a modifier and others didn't)
 * Solution: delete the object and duplicate another object to finish the join
 
-### [Unsolved]Cannot find checker image in Blender 2.9
+### [Solved]Cannot find checker image in Blender 2.9
 
-* Reason: the selected objects did not have the same type (one with a modifier and others didn't)
-* Solution: delete the object and duplicate another object to finish the join
+* Reason: in UV Editing, there is no checker image to be used
+* Solution: in Shading mode, there is a node called "checker node" which has the same function
+
+### [Solved]Cannot using "Shift+1" to merge two points
+
+* Reason: it doesn't work when I selected two objects
+* Solution: use Join (ctrl + j) to make them the same object and then using Shift+1
 
