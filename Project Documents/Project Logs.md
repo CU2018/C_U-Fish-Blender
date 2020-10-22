@@ -156,7 +156,22 @@ Peter Shirley – Ray Tracing Book Series
 
 ### Week 3 (10/15/2020 - 10/22/2020)
 
+* Update: Modeling 
 
+  * ![image-20201014030224880](embedded_images/plate2.png)
+  * ![image-20201014030224880](embedded_images/plate4.png)
+  * ![image-20201014030224880](embedded_images/plate5.png)
+  * Sculpting the fish with ZBrush
+    * ![image-20201014030224880](embedded_images/zbrush_fish1.png)
+    * ![image-20201014030224880](embedded_images/zbrush_fish2.png)
+
+* Update: UV and Texture
+
+  * ![image-20201014030224880](embedded_images/plate3.png)
+
+  * Made textures with Substance Painter![image-20201014030224880](embedded_images/plate texture.png)
+
+    
 
 ### Week 4 (10/23/2020 - 10/29/2020)
 
