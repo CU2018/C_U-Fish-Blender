@@ -274,35 +274,6 @@ Peter Shirley – Ray Tracing Book Series
 
   
 
-## ZBrush Operation Basics
-
-* Rotation: Left Click
-* View Lock: Shift + Left Click
-* Drag View: Alt + Left Click/Right Click
-* Zoom In/Out: Ctrl + Right Click
-* Size of brush: S
-* Rotation/Scale/Translate: W
-* Back to Brush: Q
-* Set brush keymap:  Ctrl + Alt and click on the brush then type the keys
-  * Move: 1
-  * Move Topology: 2
-  * Standard: 3
-  * ClayBuildUp: 4
-  * hPolish: 5
-  * Trim Curve: Ctrl + Shift
-  * Mask: Ctrl + Left Click Select
-* Draw PolyFrame: Shift + F
-* Auto Groups: Polygroups>Auto Groups
-* Select different group: Under W mode, press Ctrl and then left click
-* Reset Mesh Orientation: Under W mode, Alt and click reset button
-* Duplicate: Subtool > Dupilicate
-* DynaMesh: Geometry > DynaMesh
-* Decimation Master: Zplugin > Decimation Master
-
-
-
-
-
 ## Blender's Directory Layout
 
 [Blender's Directory Layout](https://docs.blender.org/manual/en/2.90/advanced/blender_directory_layout.html)
@@ -641,7 +612,53 @@ Structure:
     print("My Script Finished: %.4f sec" % (time.time() - time_start))
     ```
 
-    
+
+
+## ZBrush Operation Basics
+
+* Rotation: Left Click
+* View Lock: Shift + Left Click
+* Drag View: Alt + Left Click/Right Click
+* Zoom In/Out: Ctrl + Right Click
+* Size of brush: S
+* Rotation/Scale/Translate: W
+* Back to Brush: Q
+* Set brush keymap:  Ctrl + Alt and click on the brush then type the keys
+  * Move: 1
+  * Move Topology: 2
+  * Standard: 3
+  * ClayBuildUp: 4
+  * hPolish: 5
+  * Trim Curve: Ctrl + Shift
+  * Mask: Ctrl + Left Click Select
+* Draw PolyFrame: Shift + F
+* Auto Groups: Polygroups>Auto Groups
+* Select different group: Under W mode, press Ctrl and then left click
+* Reset Mesh Orientation: Under W mode, Alt and click reset button
+* Duplicate: Subtool > Dupilicate
+* DynaMesh: Geometry > DynaMesh
+* Decimation Master: Zplugin > Decimation Master
+
+
+
+## Substance Painter Operation Basics
+
+* Rotation: 
+  * view: Alt + Left Click
+  * light: Shift + Right Click
+* Translation: Alt + Middle Click
+* Scale: Alt + Right Click
+* Process of making materials:
+  * export as obj from blender
+  * import the obj to SP
+  * rename the texture
+  * textures set settings > Bake Mesh Maps > 4096
+  * find similar material from preset materials
+* 
+
+
+
+
 
 ## Cycles Render Engine Structure and Path/Ray Tracing Analysis
 
