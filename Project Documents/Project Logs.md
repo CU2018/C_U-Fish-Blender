@@ -72,6 +72,8 @@ Peter Shirley – Ray Tracing Book Series
 
 [Blender 2.90.1 Python API Documentation](https://docs.blender.org/api/current/index.html)
 
+[How to Apply PBR Textures in Blender](https://www.texturecan.com/post/1/how-to-apply-pbr-textures-in-blender/)
+
 
 
 
@@ -135,11 +137,11 @@ Peter Shirley – Ray Tracing Book Series
     * The plate of the grilled fish
 * Reference
 
-![image-20201014030224880](embedded_images/fish (2).jpg)
+![fish (2)](embedded_images/fish (2).jpg)
 
 * Modeling for this week: Finished basic model of the plate
 
-  ![image-20201014030224880](embedded_images/plate1.png)
+  ![plate1](embedded_images/plate1.png)
 
 #### Takeaways for this week
 
@@ -156,22 +158,41 @@ Peter Shirley – Ray Tracing Book Series
 
 ### Week 3 (10/15/2020 - 10/22/2020)
 
-* Update: Modeling 
+#### Update: Modeling
 
-  * ![image-20201014030224880](embedded_images/plate2.png)
-  * ![image-20201014030224880](embedded_images/plate4.png)
-  * ![image-20201014030224880](embedded_images/plate5.png)
-  * Sculpting the fish with ZBrush
-    * ![image-20201014030224880](embedded_images/zbrush_fish1.png)
-    * ![image-20201014030224880](embedded_images/zbrush_fish2.png)
+* Finished the modeling of the plate, fish and some vegetables
+  * ![plate2](embedded_images/plate2.png)
+  * ![plate4](embedded_images/plate4.png)
+  * ![plate5](embedded_images/plate5.png)
+* Sculpting the fish with ZBrush and then imported it into Blender with an add-on
+  * ![zbrush_fish1](embedded_images/zbrush_fish1.png)
+  * ![zbrush_fish2](embedded_images/zbrush_fish2.png)
 
-* Update: UV and Texture
+#### Update: UV and Texture
 
-  * ![image-20201014030224880](embedded_images/plate3.png)
+* Unwrap the UVs of the models for texture painting
+  * ![plate3](embedded_images/plate3.png)
+* Using Substance Painter to paint the textures
+  * ![plate texture](embedded_images/plate texture.png)
+  * ![plate_with_texture](embedded_images/plate_with_texture.png)
+  * ![fish_with_texture](embedded_images/fish_with_texture.png)
 
-  * Made textures with Substance Painter![image-20201014030224880](embedded_images/plate texture.png)
+#### Takeaways for this week
 
-    
+* Blender Modeling
+* Blender UV Editing
+* ZBrush Sculpting
+* Substance Painter for textures
+
+#### Plan for the next week
+
+* Finish the textures of the Grilled Fish
+
+* Adjust shading and lighting for creating photo-realistic style
+
+* Spend more time on analyzing Cycles Engine
+
+  
 
 ### Week 4 (10/23/2020 - 10/29/2020)
 
@@ -322,9 +343,9 @@ Structure:
 * types 
 * utils
 
-![images](embedded_images/bpy.png)
+![bpy](embedded_images/bpy.png)
 
-![image-20201014083417125](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201014083417125.png)
+![bpy](embedded_images/bpy.png)
 
 #### bpy.data
 
@@ -669,9 +690,53 @@ Structure:
   * rename the texture
   * textures set settings > Bake Mesh Maps > 4096
   * find similar material from preset materials
-* 
 
 
+
+
+
+## Applying PBR Textures in Blender
+
+1. UV Unwrap: just like unwrapping a cube before painting each side of it
+   * link texture image and 3d models to make a "cloth" for your model
+   * in the UV editing of Blender, the two functions are really helpful
+     * Average Island Scale (apply this firstly)
+     * Pack Island (apply this secondly)
+
+2. Need to have the following maps to find in the PBR shader node
+
+   * Base Color Map
+
+     * Defines colors of textures
+     * Shadows and highlights are taken off from the base color map, so it is a purely albedo map.
+
+   * Normal Map
+
+     * Defines the directions each surface is facing
+     * It also stores the height or strength of each face, so it can create height variance and affect shadows and highlights.
+     * The color space of the Image Texture must be set to "Non-Color Data"
+
+   * Roughness Map
+
+     * Defines how rough a surface is
+     * The color space of the Image Texture must be set to "Non-Color Data"
+
+     * To adjust the pre-set roughness:
+       * insert a Gamma node between the Image Texture node and the Principled BSDF node
+       * If the Gamma value is reduced, the roughness will be increased and vice versa.
+
+   * Metallic Map
+
+     * Defines which parts are metallic and which parts are not
+     * Theoretically, materials should either be metallic or non-metallic
+     * The color space of the Image Texture must be set to "Non-Color Data"
+
+   * Height Map / Displacement Map
+
+     * Is used to displace the geometry of the mesh
+     * Normal map is used to define fine details of the micro-surface and Height maps can cause larger degree of deformation. It usually defines macroscopic levels of displacement
+
+3. 
 
 
 
