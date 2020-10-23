@@ -308,6 +308,8 @@ Peter Shirley – Ray Tracing Book Series
 
   * arrange UVs
 
+* In edge mode, holding Ctrl to select edges. Blender will  automatically calculate the shortest path to connect the two edges you selected. Keep holding Ctrl and selecting edges to figure out the seam you want to have for unwrapping models with complicated topology
+
   
 
 ## Blender's Directory Layout
