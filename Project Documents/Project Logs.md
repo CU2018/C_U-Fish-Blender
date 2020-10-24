@@ -26,8 +26,22 @@ This individual Blender project designed for illustrating the strength of ray tr
   
 * Python 3
 
-* ZBrush
+* ZBrush 2020:
 
+  * powerful in sculpting high-poly models
+    * support millions of polys vs. limited support in Blender
+    * e.g. the fish model contains above 300,000 active points
+    * but need to use the Decimation Master Zplugin to reduce points before importing it to Blender
+    * otherwise, there would be high latency of operations in Blender
+  * provide various kinds of brushes for sculpting
+  * grouping and masking function are quite helpful
+  
+* Substance Painter:
+
+  * plenty of preset assets (including smart materials, smart masks, brushes, filters, and procedurals)
+  * better layers hierarchy or structures
+  * easy to import obj files and export different kinds of textures maps (e.g. normal, height, roughness, metallic and base color maps) as needed
+  
   
 
 ## References
@@ -68,13 +82,15 @@ Peter Shirley – Ray Tracing Book Series
 
 [CUDA programming](https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html) 
 
+[What is HDRI?](https://vrender.com/what-is-hdri/)
+
+[HDRIHaven](https://hdrihaven.com/hdris/)
+
 [Blender's Directory Layout](https://docs.blender.org/manual/en/2.90/advanced/blender_directory_layout.html)
 
 [Blender 2.90.1 Python API Documentation](https://docs.blender.org/api/current/index.html)
 
 [How to Apply PBR Textures in Blender](https://www.texturecan.com/post/1/how-to-apply-pbr-textures-in-blender/)
-
-
 
 
 
@@ -196,7 +212,19 @@ Peter Shirley – Ray Tracing Book Series
 
 ### Week 4 (10/23/2020 - 10/29/2020)
 
+#### Update: UV and Texture
 
+* Finished textures for vegetables
+
+#### Update: 
+
+#### Takeaways for this week
+
+* 
+
+#### Plan for the next week
+
+* 
 
 ### Week 5 (10/30/2020 - 11/5/2020)
 
@@ -310,7 +338,90 @@ Peter Shirley – Ray Tracing Book Series
 
 * In edge mode, holding Ctrl to select edges. Blender will  automatically calculate the shortest path to connect the two edges you selected. Keep holding Ctrl and selecting edges to figure out the seam you want to have for unwrapping models with complicated topology
 
-  
+
+
+
+## Blender Lighting
+
+#### HDRI
+
+* Definition: HDRI is a panoramic photo, which covers all angles form a single point and contains a large amount of data (usually 32 bits per pixel per channel), which can be used for the illumination of CG scene
+
+* Procedure for setting up HDRI with Assessment Manager Add-on
+
+  * download the HDRI images that you find the most appropriate
+    * from e.g. [HDRIHaven](https://hdrihaven.com/hdris/)
+  * move the .hdr file to the directory that your Assessment Manager is located for in the project
+  * In shading mode, 
+    * switch to World shading
+    * create the node called "AW_envrionment" and connect the shader with World Output
+    * ![am_environment](embedded_images/am_environment.png)
+
+* I chose a fireplace HDRI for having a warm color tone of the scene
+
+  * ![hdri setup](embedded_images/hdri setup.png)
+
+    
+
+#### Apply PBR Textures in Blender
+
+1. UV Unwrap: just like unwrapping a cube before painting each side of it
+   * link texture image and 3d models to make a "cloth" for your model
+   * in the UV editing of Blender, the two functions are really helpful
+     * Average Island Scale (apply this firstly)
+     * Pack Island (apply this secondly)
+2. Need to have the following maps to find in the PBR shader node
+
+   * Base Color Map
+
+     * Defines colors of textures
+     * Shadows and highlights are taken off from the base color map, so it is a purely albedo map.
+
+   * Normal Map
+
+     * Defines the directions each surface is facing
+     * It also stores the height or strength of each face, so it can create height variance and affect shadows and highlights.
+     * The color space of the Image Texture must be set to "Non-Color Data"
+
+   * Roughness Map
+
+     * Defines how rough a surface is
+     * The color space of the Image Texture must be set to "Non-Color Data"
+
+     * To adjust the pre-set roughness:
+       * insert a Gamma node between the Image Texture node and the Principled BSDF node
+       * If the Gamma value is reduced, the roughness will be increased and vice versa.
+
+   * Metallic Map
+
+     * Defines which parts are metallic and which parts are not
+     * Theoretically, materials should either be metallic or non-metallic
+     * The color space of the Image Texture must be set to "Non-Color Data"
+
+   * Height Map / Displacement Map
+
+     * Is used to displace the geometry of the mesh
+     * Normal map is used to define fine details of the micro-surface and Height maps can cause larger degree of deformation. It usually defines macroscopic levels of displacement
+3. In shading mode:
+   * click on "Principle BSDF"
+   * press "Ctrl+Shift+T" to select the above maps from textures painting (e.g. textures exported from Substance Painter in this case)
+     * Make sure you have turned on Use Nodes
+       * ![use_nodes](embedded_images/use_nodes.png)
+     * it will automatically connect the corresponding parameters and maps for you
+       * ![plate_mtl_nodes](embedded_images/plate_mtl_nodes.png)
+     * Short Cut for applying materials to objects which use a same UV texture
+       * set up one of the objects first
+       * select all other objects which are in the UV texture
+       * press Shift to select the first object and then press "Ctrl+L" to select the "Material"
+       * ![short_cut_material](embedded_images/short_cut_material.png)
+
+#### Adjust Subsurface parameter
+
+
+
+
+
+
 
 ## Blender's Directory Layout
 
@@ -692,53 +803,6 @@ Structure:
   * rename the texture
   * textures set settings > Bake Mesh Maps > 4096
   * find similar material from preset materials
-
-
-
-
-
-## Applying PBR Textures in Blender
-
-1. UV Unwrap: just like unwrapping a cube before painting each side of it
-   * link texture image and 3d models to make a "cloth" for your model
-   * in the UV editing of Blender, the two functions are really helpful
-     * Average Island Scale (apply this firstly)
-     * Pack Island (apply this secondly)
-
-2. Need to have the following maps to find in the PBR shader node
-
-   * Base Color Map
-
-     * Defines colors of textures
-     * Shadows and highlights are taken off from the base color map, so it is a purely albedo map.
-
-   * Normal Map
-
-     * Defines the directions each surface is facing
-     * It also stores the height or strength of each face, so it can create height variance and affect shadows and highlights.
-     * The color space of the Image Texture must be set to "Non-Color Data"
-
-   * Roughness Map
-
-     * Defines how rough a surface is
-     * The color space of the Image Texture must be set to "Non-Color Data"
-
-     * To adjust the pre-set roughness:
-       * insert a Gamma node between the Image Texture node and the Principled BSDF node
-       * If the Gamma value is reduced, the roughness will be increased and vice versa.
-
-   * Metallic Map
-
-     * Defines which parts are metallic and which parts are not
-     * Theoretically, materials should either be metallic or non-metallic
-     * The color space of the Image Texture must be set to "Non-Color Data"
-
-   * Height Map / Displacement Map
-
-     * Is used to displace the geometry of the mesh
-     * Normal map is used to define fine details of the micro-surface and Height maps can cause larger degree of deformation. It usually defines macroscopic levels of displacement
-
-3. 
 
 
 
