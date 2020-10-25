@@ -30,6 +30,7 @@ This individual Blender project designed for illustrating the strength of ray tr
 
   * powerful in sculpting high-poly models
     * support millions of polys vs. limited support in Blender
+      * but Blender sculpting is convenient for making variations of small objects (e.g. the variations of vegetables in this case) 
     * e.g. the fish model contains above 300,000 active points
     * but need to use the Decimation Master Zplugin to reduce points before importing it to Blender
     * otherwise, there would be high latency of operations in Blender
@@ -215,12 +216,19 @@ Peter Shirley – Ray Tracing Book Series
 #### Update: UV and Texture
 
 * Finished textures for vegetables
+* Added more variations of side vegetables
 
 #### Update: 
 
 #### Takeaways for this week
 
-* 
+* Eevee lighting settings vs. Cycles
+
+* Blender Rigid Body for simulation
+
+* Blender Particle System
+
+  
 
 #### Plan for the next week
 
@@ -419,7 +427,63 @@ Peter Shirley – Ray Tracing Book Series
 
 
 
+#### Ambient Occlusion in Eevee Render Engine
 
+* Ambient Occlusion: "add more weights"
+
+  * In [3D computer graphics](https://en.wikipedia.org/wiki/3D_computer_graphics), [modeling](https://en.wikipedia.org/wiki/3D_modeling), and [animation](https://en.wikipedia.org/wiki/Computer_animation), **ambient occlusion** is a [shading](https://en.wikipedia.org/wiki/Shading) and [rendering](https://en.wikipedia.org/wiki/Rendering_(computer_graphics)) technique used to calculate how exposed each point in a scene is to [ambient lighting](https://en.wikipedia.org/wiki/Shading#Ambient_lighting). For example, the interior of a tube is typically more occluded (and hence darker) than the exposed outer surfaces, and becomes darker the deeper inside the tube one goes.
+  * Ambient occlusion can be seen as an accessibility value that is calculated for each surface point.
+
+* With AO:
+
+  ![with_AO](embedded_images/with_AO.png)
+
+* Without AO:
+
+  ![without_AO](embedded_images/without_AO.png)
+
+#### Settings of Eevee Render Engine
+
+* Ambient Occlusion
+* Bloom
+* Screen Space Reflections
+  * Refraction
+  * Half Res Trace
+
+
+
+
+
+## Blender Rigid Body
+
+* Used for simulating the randomness when adding main vegetable sides to the plate
+
+* Procedures:
+
+  1. Duplicate all the main vegetable sides multiple times with variations on translations and rotations
+
+  2. Use "Random Transformation" to have a random preset of objects
+
+  3. Select all vegetable and use "Add Active"
+
+     ![active_body](embedded_images/active_body.png)
+
+  4. Select the plate and use "Add Passive" and then also set the rigid body Collisions to Mesh
+
+     ![mesh_collision](embedded_images/mesh_collision.png)
+
+  5. Once figure out an appropriate simulation result, use "Apply Transformation" and then "Remove Rigid Body"
+
+     
+
+## Blender Particle System 
+
+* Used to create random particles 
+* Create a new collection for the objects you want to spread out
+* adjust parameters in particle system to locate the collection
+* switch to "weight paint" mode to draw the area that the particles are allowed to be placed onto
+* add some randomness in rotation
+* Cannot delete the collection after finishing setting the particle system
 
 
 

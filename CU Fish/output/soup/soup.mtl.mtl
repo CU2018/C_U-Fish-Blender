@@ -1,0 +1,160 @@
+# Blender MTL File: 'C_U Fish1.blend'
+# Material Count: 12
+
+newmtl Material.002
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl SpringOnion
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl garlic
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.776596 0.776596 0.776596
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl lotusRoot
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.131206 0.131206 0.131206
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl moyu
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl pickledChill
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl plate_mtl
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\plate\\plate_Normal.plate.jpg
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\plate\\plate_BaseColor.plate.jpg
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\plate\\plate_Roughness.plate.jpg
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\plate\\plate_Metalness.plate.jpg
+
+newmtl potato
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.131206 0.131206 0.131206
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl scallions
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.414894 0.414894 0.414894
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl sesame
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Normal.vegetables.png
+map_Kd C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_BaseColor.vegetables.png
+map_Ns C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Roughness.vegetables.png
+refl C:\\Users\\Administrator\\OneDrive\\Pitt Terms\\10-2020Fall\\UCB Research\\C_U-Fish-Blender-Ray-Tracing\\CU Fish\\textures\\vegetables\\vegetables_Metalness.vegetables.png
+
+newmtl soup
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.123710 0.005528 0.005528
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
