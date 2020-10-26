@@ -1,4 +1,4 @@
-# Ray Tracing Project with Blender
+Ray Tracing Project with Blender
 
 Siyu Zhang                         
 
@@ -445,10 +445,24 @@ Peter Shirley – Ray Tracing Book Series
 #### Settings of Eevee Render Engine
 
 * Ambient Occlusion
+
 * Bloom
+
 * Screen Space Reflections
   * Refraction
   * Half Res Trace
+  
+* Set the main lighting (the Sun) to a bit more yellowish and set the strength to 2.0
+
+* Camera:
+
+  * in View, under the View Lock, toggle on "Camera To View" to set up camera more easily
+
+  * set Depth of Field and Focus on Object
+
+    ![DoF](embedded_images/DoF.png)
+
+  * 
 
 
 
@@ -474,7 +488,14 @@ Peter Shirley – Ray Tracing Book Series
 
   5. Once figure out an appropriate simulation result, use "Apply Transformation" and then "Remove Rigid Body"
 
-     
+* Examples:
+
+  * Rigid Body used for the lowest layer of vegetables
+  * ![Rigid Body Animation1](embedded_images/Rigid Body Animation1.gif)
+  * Rigid Body used for the upper layer of vegetables
+  * ![Rigid Body Animation2](embedded_images/Rigid Body Animation2.gif)
+
+  
 
 ## Blender Particle System 
 
@@ -484,6 +505,49 @@ Peter Shirley – Ray Tracing Book Series
 * switch to "weight paint" mode to draw the area that the particles are allowed to be placed onto
 * add some randomness in rotation
 * Cannot delete the collection after finishing setting the particle system
+
+
+
+## Blender Quick Smoke (Smoke or Fire)
+
+* Workflow
+
+  At least a [Domain](https://docs.blender.org/manual/en/dev/physics/fluid/type/domain/index.html) object and one [Flow](https://docs.blender.org/manual/en/dev/physics/fluid/type/flow.html) object are required to create a fluid simulation.
+
+1. Create a [Domain object](https://docs.blender.org/manual/en/dev/physics/fluid/type/domain/index.html) that defines the bounds of the simulation volume.
+2. Set up [Flow](https://docs.blender.org/manual/en/dev/physics/fluid/type/flow.html) objects which will emit fluid.
+3. Set up [Effector](https://docs.blender.org/manual/en/dev/physics/fluid/type/effector.html) objects to make the fluid interact with objects in the scene.
+4. Assign a [material](https://docs.blender.org/manual/en/dev/physics/fluid/material.html) to the domain object.
+5. Save the blend-file.
+6. [Bake the Cache](https://docs.blender.org/manual/en/dev/physics/fluid/type/domain/cache.html) for the simulation.
+
+
+
+## Blender Video Editing
+
+1. export all frames of the animation to a directory
+
+2. open a new instance of Blender and add a new window called "Video Editing"
+
+   ![video_editing](embedded_images/video_editing.png)
+
+3. Add > images/sequences and select all the exported frames
+
+   i![image_sequence](embedded_images/image_sequence.png)
+
+4. Set dimensions correctly as the original frames
+
+   ![set_dimensions](embedded_images/set_dimensions.png)
+
+5. Set the following output attributes
+
+   ![output_settings](embedded_images/output_settings.png)
+
+6. Turn off the "Film" View Transform and set to "Standard"
+
+   ![color_management](embedded_images/color_management.png)
+
+7. Set the frame window the same as your sequence and then press Ctrl+F12 to compose all frames (.mov format output)
 
 
 
@@ -897,4 +961,9 @@ This sections focuses on analysis of [Cycles Render Engine source code](https://
 
 * Reason: it doesn't work when I selected two objects
 * Solution: use Join (ctrl + j) to make them the same object and then using Shift+1
+
+### [Solved]Cannot using "I" to insert keyframes
+
+* Reason: there was an error "Keying set failed to insert any keyframes" when I pressed "I"
+* Solution: find keyframe sets and clear all keyframe sets
 
