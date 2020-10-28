@@ -1018,3 +1018,12 @@ This sections focuses on analysis of [Cycles Render Engine source code](https://
 * Reason: there was an error "Keying set failed to insert any keyframes" when I pressed "I"
 * Solution: find keyframe sets and clear all keyframe sets
 
+### [Solved]How to reset the finished commits without pushing (Git) 
+
+* Solution: 
+  * Do NOT use `git reset --hard`
+  * Do NOT use `git reset --hard`
+  * Do NOT use `git reset --hard`
+  * Use `git reset HEAD^` to get back to the last commit without deleting all your local files in the unpushed commit
+
+​                                                                                                                                      
