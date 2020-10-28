@@ -211,28 +211,35 @@ Peter Shirley – Ray Tracing Book Series
 
   
 
-### Week 4 (10/23/2020 - 10/29/2020)
+### Week 4 (10/23/2020 - 10/31/2020)
 
 #### Update: UV and Texture
 
 * Finished textures for vegetables
 * Added more variations of side vegetables
 
-#### Update: 
+#### Update: Rigid Body & Particle System
+
+* Added the vegetables to the plate
+
+#### Update: Special Effects - Fluid Effect (Smoke & Fire)
+
+* Created and manipulated the parameters for making better visual effects
+  * still need to be improved
 
 #### Takeaways for this week
 
+* Blender shading nodes: Principle PBR node
 * Eevee lighting settings vs. Cycles
-
 * Blender Rigid Body for simulation
-
 * Blender Particle System
-
-  
+* Quick Smoke (Smoke and Fire)
 
 #### Plan for the next week
 
-* 
+* Cycles lighting 
+* Learn and list the necessary parameters for making good lighting 
+  * probably could integrate them into an Add-on
 
 ### Week 5 (10/30/2020 - 11/5/2020)
 
@@ -434,13 +441,13 @@ Peter Shirley – Ray Tracing Book Series
   * In [3D computer graphics](https://en.wikipedia.org/wiki/3D_computer_graphics), [modeling](https://en.wikipedia.org/wiki/3D_modeling), and [animation](https://en.wikipedia.org/wiki/Computer_animation), **ambient occlusion** is a [shading](https://en.wikipedia.org/wiki/Shading) and [rendering](https://en.wikipedia.org/wiki/Rendering_(computer_graphics)) technique used to calculate how exposed each point in a scene is to [ambient lighting](https://en.wikipedia.org/wiki/Shading#Ambient_lighting). For example, the interior of a tube is typically more occluded (and hence darker) than the exposed outer surfaces, and becomes darker the deeper inside the tube one goes.
   * Ambient occlusion can be seen as an accessibility value that is calculated for each surface point.
 
-* With AO:
-
-  ![with_AO](embedded_images/with_AO.png)
-
 * Without AO:
 
   ![without_AO](embedded_images/without_AO.png)
+  
+* With AO:
+
+  ![with_AO](embedded_images/with_AO.png)
 
 #### Settings of Eevee Render Engine
 
@@ -454,6 +461,12 @@ Peter Shirley – Ray Tracing Book Series
   
 * Set the main lighting (the Sun) to a bit more yellowish and set the strength to 2.0
 
+* Volumetric: 
+
+  * Tile Size: controls the quality of volume effect (lower -> better)
+  * Distribution: distribute more samples closer to the camera [can avoid the effect overlay on other objects]
+  * ![volume_eevee](embedded_images/volume_eevee.png)
+
 * Camera:
 
   * in View, under the View Lock, toggle on "Camera To View" to set up camera more easily
@@ -462,9 +475,8 @@ Peter Shirley – Ray Tracing Book Series
 
     ![DoF](embedded_images/DoF.png)
 
-  * 
-
-
+    
+  
 
 
 
@@ -520,6 +532,45 @@ Peter Shirley – Ray Tracing Book Series
 4. Assign a [material](https://docs.blender.org/manual/en/dev/physics/fluid/material.html) to the domain object.
 5. Save the blend-file.
 6. [Bake the Cache](https://docs.blender.org/manual/en/dev/physics/fluid/type/domain/cache.html) for the simulation.
+
+***Have to bake one Quick Smoke first before starting the next one! ! !***
+
+* Smoke:
+
+  * Things you need to create:
+
+    * **Flow objects**: it is like the emitter of the smoke; usually simply mesh objects and find (F3) "Quick Smoke" then select the type as "Smoke" with the behavior of "Inflow"
+    * ![smoke_setting1](embedded_images/smoke_setting1.png)
+    * **Domain**: after click on "Quick Smoke," a Domain will be automatically generated.
+    * ![smoke_setting2](embedded_images/smoke_setting2.png)
+
+  * Main Attributes to modify:
+
+    In Flow:
+
+    * Smoke Color: modify the color of the smoke
+    * Initial Temperature: how fast the smoke is rising
+    * Density: the density of the smoke
+    * Texture: add more variations to the change of the smoke
+
+    ![smoke_setting4](embedded_images/smoke_setting4.png)
+
+    In Domain:
+
+    * Resolution Division & Time Scale: resolution used for fluid domain and simulation speed
+    * Adaptive Domain: add resolution and the domain changes accordingly
+
+    ![smoke_setting5](embedded_images/smoke_setting5.png)
+
+    * Gas:
+      * Buoyancy Density: higher -> faster rising smoke
+      * Heat: higher -> faster rising smoke
+      * Vorticity: turbulence and rotation in smoke
+    * Dissolve: how quick the smoke will dissolve (smaller value -> dissolve faster)
+    * Noise: used for high-resolution simulation
+    * Cache: choose "Type" as "All" and "Bake All" each time the parameters are modified
+
+    ![smoke_setting3](embedded_images/smoke_setting3.png)
 
 
 
