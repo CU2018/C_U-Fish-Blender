@@ -93,6 +93,8 @@ Peter Shirley – Ray Tracing Book Series
 
 [How to Apply PBR Textures in Blender](https://www.texturecan.com/post/1/how-to-apply-pbr-textures-in-blender/)
 
+[Cycle Wiki](https://wiki.blender.org/wiki/Source/Render/Cycles)
+
 
 
 ## Weekly Progress
