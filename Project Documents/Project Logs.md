@@ -95,6 +95,8 @@ Peter Shirley – Ray Tracing Book Series
 
 [Cycle Wiki](https://wiki.blender.org/wiki/Source/Render/Cycles)
 
+[Cut Your Render Time In Half in Blender 2.9](https://www.youtube.com/watch?v=PF8SmNFohco)
+
 
 
 ## Weekly Progress
@@ -186,6 +188,7 @@ Peter Shirley – Ray Tracing Book Series
 * Sculpting the fish with ZBrush and then imported it into Blender with an add-on
   * ![zbrush_fish1](embedded_images/zbrush_fish1.png)
   * ![zbrush_fish2](embedded_images/zbrush_fish2.png)
+  * ![Fish Sculpt](embedded_images/Fish Sculpt.gif)
 
 #### Update: UV and Texture
 
