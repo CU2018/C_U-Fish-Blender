@@ -1,5 +1,5 @@
-# C_U-Fish-Blender-Ray-Tracing
- This repo contains all of the files for my individual Blender project designed for illustrating the strength of ray tracing and customizing a set of attributes in Blender (including customized texture nodes, shader nodes, and attributes of [Cycles Engine](https://www.cycles-renderer.org/)) particularly for food rendering..
+# C_U-Fish-Blender
+ This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)). The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
 
 
 
