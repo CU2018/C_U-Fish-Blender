@@ -283,7 +283,7 @@ Peter Shirley – Ray Tracing Book Series
 
 ### Week 6 (11/6/2020 - 11/12/2020)
 
-
+* Finish up the report and the final demo video
 
 
 
