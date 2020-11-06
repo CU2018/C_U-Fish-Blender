@@ -8,11 +8,11 @@ Start Time: 2020.10.1
 
 ## Introduction
 
-This documentation records the development process of Siyu's Ray Tracing Project with Blender, including weekly progress, references and implementation details in the project.
+This documentation records the development process of Siyu's Blender project "C_U Fish", including findings, weekly progress, references and implementation details in the project.
 
 ### Goal of this Project
 
-This individual Blender project designed for illustrating the strength of ray tracing and customizing a set of attributes in Blender (including customized texture nodes, shader nodes, and attributes of [Cycles Engine](https://www.cycles-renderer.org/)) particularly for food rendering.
+This individual Blender is designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)). The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
 
 ### Technologies and software used in this project
 
@@ -44,6 +44,12 @@ This individual Blender project designed for illustrating the strength of ray tr
   * easy to import obj files and export different kinds of textures maps (e.g. normal, height, roughness, metallic and base color maps) as needed
   
   
+
+## Rasterization VS. Ray Tracing -- Eevee VS. Cycles 
+
+This sections focuses on analysis of [Cycles Render Engine source code](https://developer.blender.org/diffusion/B/browse/master/intern/cycles/) which is an open-source and powerful renderer in Blender. [Cycles](https://www.cycles-renderer.org/) is a physically based production renderer developed by the [Blender project](https://www.blender.org/).
+
+
 
 ## References
 
@@ -244,11 +250,36 @@ Peter Shirley – Ray Tracing Book Series
 
 * Cycles lighting 
 * Learn and list the necessary parameters for making good lighting 
+  
   * probably could integrate them into an Add-on
+  
+    
 
 ### Week 5 (10/30/2020 - 11/5/2020)
 
+#### Update: Scene and lighting
 
+* Removed the kitchen scene but create a studio style scene
+  * an "endless" background
+* Replaced the HDRI with two lights
+  * one above the dish
+  * one in front of the dish at a lower place
+* ![new_scene](embedded_images/new_scene.png)
+
+#### Update: Animation
+
+* Rotated the camera with a small angle and made several short animations
+  * rendering with Cycles is way slower than Eevee
+* Composed the rendered images and made several small animation clips
+
+#### Takeaways for this week
+
+* Blender lighting techniques
+* Cycles denoising
+
+#### Plan for the next week
+
+* Focus on analyzing the pros and cons between Cycles and Eevee and broadly ray tracing and rasterization  
 
 ### Week 6 (11/6/2020 - 11/12/2020)
 
@@ -987,12 +1018,6 @@ Structure:
   * rename the texture
   * textures set settings > Bake Mesh Maps > 4096
   * find similar material from preset materials
-
-
-
-## Cycles Render Engine Structure and Path/Ray Tracing Analysis
-
-This sections focuses on analysis of [Cycles Render Engine source code](https://developer.blender.org/diffusion/B/browse/master/intern/cycles/) which is an open-source and powerful renderer in Blender. [Cycles](https://www.cycles-renderer.org/) is a physically based production renderer developed by the [Blender project](https://www.blender.org/).
 
 
 
