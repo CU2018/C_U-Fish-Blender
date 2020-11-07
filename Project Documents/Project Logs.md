@@ -1,10 +1,78 @@
-Ray Tracing Project with Blender
+# Ray Tracing Project with Blender
 
 Siyu Zhang                         
 
 Start Time: 2020.10.1
 
-[TOC]
+End Time: 2020.11.12
+
+
+
+- [Introduction](#introduction)
+  * [Goal of this Project](#goal-of-this-project)
+  * [Technologies and software used in this project](#technologies-and-software-used-in-this-project)
+- [Rasterization VS. Ray Tracing -- Eevee VS. Cycles](#rasterization-vs-ray-tracing----eevee-vs-cycles)
+- [References](#references)
+  * [Ray Tracing Algorithms](#ray-tracing-algorithms)
+  * [Other Resources](#other-resources)
+- [Weekly Progress](#weekly-progress)
+  * [Week 1 (10/1/2020 - 10/8/2020)](#week-1--10-1-2020---10-8-2020-)
+    + [Plan for the project](#plan-for-the-project)
+    + [Blender learning progress](#blender-learning-progress)
+  * [Week 2 (10/9/2020 - 10/14/2020)](#week-2--10-9-2020---10-14-2020-)
+    + [Update: Plan for the project](#update--plan-for-the-project)
+    + [Ray Tracing Strength and Choice of Models/Scenes](#ray-tracing-strength-and-choice-of-models-scenes)
+    + [Takeaways for this week](#takeaways-for-this-week)
+    + [Plan for the next week](#plan-for-the-next-week)
+  * [Week 3 (10/15/2020 - 10/22/2020)](#week-3--10-15-2020---10-22-2020-)
+    + [Update: Modeling](#update--modeling)
+    + [Update: UV and Texture](#update--uv-and-texture)
+    + [Takeaways for this week](#takeaways-for-this-week-1)
+    + [Plan for the next week](#plan-for-the-next-week-1)
+  * [Week 4 (10/23/2020 - 10/31/2020)](#week-4--10-23-2020---10-31-2020-)
+    + [Update: UV and Texture](#update--uv-and-texture-1)
+    + [Update: Rigid Body & Particle System](#update--rigid-body---particle-system)
+    + [Update: Special Effects - Fluid Effect (Smoke & Fire)](#update--special-effects---fluid-effect--smoke---fire-)
+    + [Takeaways for this week](#takeaways-for-this-week-2)
+    + [Plan for the next week](#plan-for-the-next-week-2)
+  * [Week 5 (10/30/2020 - 11/5/2020)](#week-5--10-30-2020---11-5-2020-)
+    + [Update: Scene and lighting](#update--scene-and-lighting)
+    + [Update: Animation](#update--animation)
+    + [Takeaways for this week](#takeaways-for-this-week-3)
+    + [Plan for the next week](#plan-for-the-next-week-3)
+  * [Week 6 (11/6/2020 - 11/12/2020)](#week-6--11-6-2020---11-12-2020-)
+- [Blender Modeling Basics](#blender-modeling-basics)
+- [Blender UV Editing Basics](#blender-uv-editing-basics)
+- [Blender Lighting](#blender-lighting)
+    + [HDRI](#hdri)
+    + [Apply PBR Textures in Blender](#apply-pbr-textures-in-blender)
+    + [Ambient Occlusion in Eevee Render Engine](#ambient-occlusion-in-eevee-render-engine)
+    + [Settings of Eevee Render Engine](#settings-of-eevee-render-engine)
+- [Blender Rigid Body](#blender-rigid-body)
+- [Blender Particle System](#blender-particle-system)
+- [Blender Quick Smoke (Smoke or Fire)](#blender-quick-smoke--smoke-or-fire-)
+- [Blender Video Editing](#blender-video-editing)
+- [Blender's Directory Layout](#blender-s-directory-layout)
+- [Python Scripting in Blender](#python-scripting-in-blender)
+  * [bpy](#bpy)
+    + [bpy.data](#bpydata)
+    + [bpy.context](#bpycontext)
+    + [byp.ops](#bypops)
+    + [byp.types](#byptypes)
+    + [Animation](#animation)
+  * [Python API Overview](#python-api-overview)
+  * [Reference API Usage](#reference-api-usage)
+- [ZBrush Operation Basics](#zbrush-operation-basics)
+- [Substance Painter Operation Basics](#substance-painter-operation-basics)
+- [Issues / Problems Encountered](#issues---problems-encountered)
+  * [[Solved]"C_U-Fish.blend" file takes a while to be started up](#-solved--c-u-fishblend--file-takes-a-while-to-be-started-up)
+  * [[Solved]Cannot join objects in the scene](#-solved-cannot-join-objects-in-the-scene)
+  * [[Solved]Cannot find checker image in Blender 2.9](#-solved-cannot-find-checker-image-in-blender-29)
+  * [[Solved]Cannot using "Shift+1" to merge two points](#-solved-cannot-using--shift-1--to-merge-two-points)
+  * [[Solved]Cannot using "I" to insert keyframes](#-solved-cannot-using--i--to-insert-keyframes)
+  * [[Solved]How to reset the finished commits without pushing (Git)](#-solved-how-to-reset-the-finished-commits-without-pushing--git-)
+
+
 
 ## Introduction
 

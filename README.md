@@ -1,4 +1,28 @@
 # C_U-Fish-Blender
+- [Introduction](#introduction)
+- [Hardware & Software](#hardware---software)
+- [Report: Rasterization VS. Ray Tracing -- Eevee VS. Cycles in Blender](#report--rasterization-vs-ray-tracing----eevee-vs-cycles-in-blender)
+  * [Rasterization - Eevee](#rasterization---eevee)
+  * [Ray Tracing - Cycles](#ray-tracing---cycles)
+  * [Outputs](#outputs)
+    + [Clip1: 100 frames --> 160-frame animation; focal length: 100 mm](#clip1--100-frames-----160-frame-animation--focal-length--100-mm)
+    + [Clip2: 100 frames --> 160-frame animation; focal length: 100 mm](#clip2--100-frames-----160-frame-animation--focal-length--100-mm)
+    + [Clip3: 70 frames --> 95-frame animation; focal length: 100 mm](#clip3--70-frames-----95-frame-animation--focal-length--100-mm)
+    + [Clip4: 30 frames --> 100-frame animation; focal length: 26 mm](#clip4--30-frames-----100-frame-animation--focal-length--26-mm)
+  * [Compare and Analyze the Outputs](#compare-and-analyze-the-outputs)
+    + [Similarity / Premise of the comparison](#similarity---premise-of-the-comparison)
+    + [Differences](#differences)
+      - [Lighting](#lighting)
+      - [Subsurface](#subsurface)
+      - [Volumetric Object/Effect](#volumetric-object-effect)
+      - [Ambient Occlusion / Indirect Shadows](#ambient-occlusion---indirect-shadows)
+      - [Surface Reflection](#surface-reflection)
+      - [Render time](#render-time)
+  * [Conclusion](#conclusion)
+  * [References](#references)
+
+
+
 ## Introduction
 
 This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)) typically in food rendering. The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
@@ -8,6 +32,8 @@ This repo contains all of the files for my individual Blender project designed f
 ** Main blender files are under the folder named "[Blender FIles](https://github.com/CU2018/C_U-Fish-Blender/tree/master/CU%20Fish/Blender%20Files)"
 
 ** Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project%20Documents/Project%20Logs.md) under the folder named "[Project Documentation](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/tree/master/Project%20Documents)"
+
+** Final Presentation Slides
 
 
 
