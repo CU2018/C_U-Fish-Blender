@@ -83,7 +83,7 @@ According to Blender documentation, Eevee engine is a realtime render engine bui
 
 Here is a diagram which demonstrates the pipeline of OpenGL rendering:
 
-![RenderingPipeline](Project Documents/embedded_images/RenderingPipeline.png)
+![RenderingPipeline](Project_Documents/embedded_images/RenderingPipeline.png)
 
 ​								                                                                               [Rendering Pipeline Overview](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview)
 
@@ -97,7 +97,7 @@ Rasterization loop:
 
 In this project, the setting in Eevee looks like this:
 
-![eevee_setting](Project Documents/embedded_images/eevee_setting.png)
+![eevee_setting](Project_Documents/embedded_images/eevee_setting.png)
 
 
 
@@ -113,7 +113,7 @@ An interesting thing about path tracing is that the effect can be emulated throu
 
 Here is a diagram which demonstrates the pipeline of ray tracing:
 
-![ShaderPipeline](Project Documents/embedded_images/ShaderPipeline.svg)
+![ShaderPipeline](Project_Documents/embedded_images/ShaderPipeline.svg)
 
 ​                                                                                   					[DX12 Raytracing tutorial - Part 2](https://developer.nvidia.com/rtx/raytracing/dxr/DX12-Raytracing-tutorial-Part-2)
 
@@ -127,11 +127,11 @@ Ray Tracing loop:
 
 In the implementation of Cycles, light rays are traced from the camera into the scene and then onto lights (which is the opposite of the reality)
 
-![cycles_rays](Project Documents/embedded_images/cycles_rays.png)
+![cycles_rays](Project_Documents/embedded_images/cycles_rays.png)
 
 In this project, the setting in Cycles looks like this:
 
-![cycles_setting](Project Documents/embedded_images/cycles_setting.png)
+![cycles_setting](Project_Documents/embedded_images/cycles_setting.png)
 
 
 
@@ -143,31 +143,31 @@ In this project, the setting in Cycles looks like this:
 
 * Eevee
 
-  ![eevee_v2_animation1](Project Documents/embedded_images/eevee_v2_animation1.gif)
+  ![eevee_v2_animation1](Project_Documents/embedded_images/eevee_v2_animation1.gif)
 
 * Cycles
 
-  ![cycles_v2_animation1](Project Documents/embedded_images/cycles_v2_animation1.gif)
+  ![cycles_v2_animation1](Project_Documents/embedded_images/cycles_v2_animation1.gif)
 
 #### Clip2: 100 frames --> 160-frame animation; focal length: 100 mm
 
 * Eevee
 
-  ![eevee_v2_animation2](Project Documents/embedded_images/eevee_v2_animation2.gif)
+  ![eevee_v2_animation2](Project_Documents/embedded_images/eevee_v2_animation2.gif)
 
 * Cycles
 
-  ![cycles_v2_animation2](Project Documents/embedded_images/cycles_v2_animation2.gif)
+  ![cycles_v2_animation2](Project_Documents/embedded_images/cycles_v2_animation2.gif)
 
 #### Clip3: 70 frames --> 95-frame animation; focal length: 100 mm
 
 * Eevee
 
-  ![eevee_v2_animation3](Project Documents/embedded_images/eevee_v2_animation3.gif)
+  ![eevee_v2_animation3](Project_Documents/embedded_images/eevee_v2_animation3.gif)
 
 * Cycles
 
-  ![cycles_v2_animation3](Project Documents/embedded_images/cycles_v2_animation3.gif)
+  ![cycles_v2_animation3](Project_Documents/embedded_images/cycles_v2_animation3.gif)
 
 
 
@@ -175,11 +175,11 @@ In this project, the setting in Cycles looks like this:
 
 * Eevee
 
-  ![eevee_v2_animation4](Project Documents/embedded_images/eevee_v2_animation4.gif)
+  ![eevee_v2_animation4](Project_Documents/embedded_images/eevee_v2_animation4.gif)
 
 * Cycles
 
-  ![cycles_v2_animation4](Project Documents/embedded_images/cycles_v2_animation4.gif)
+  ![cycles_v2_animation4](Project_Documents/embedded_images/cycles_v2_animation4.gif)
 
   
 
@@ -189,7 +189,7 @@ In this project, the setting in Cycles looks like this:
 
 Before analyzing the differences between the two renders, the premise of the comparison should be pointed out. Both renders use the node named "Principled BSDF" which is based on the Disney principled model also known as the "PBR" (Physically Based Rendering) shader. Eevee materials are created using the same shader nodes as Cycles, making it easy to render existing scenes. For Cycles users, this property makes Eevee work great for previewing materials in real-time.
 
-![plate_mtl_nodes](Project Documents/embedded_images/plate_mtl_nodes.png)
+![plate_mtl_nodes](Project_Documents/embedded_images/plate_mtl_nodes.png)
 
 This makes it easy to change the renderer from Eevee to Cycles without changing too many parameters or attributes.
 
@@ -207,17 +207,17 @@ Differences in lighting might be the most primary differences between the two re
 
 Here is the light setting in this project:
 
-![lighting_setting](Project Documents/embedded_images/lighting_setting.png)
+![lighting_setting](Project_Documents/embedded_images/lighting_setting.png)
 
 In the two frames below, we could see that the background is noticeable and brighter in Cycles, while the yellow background looks quite dark and is almost "ignored" in Eevee.
 
 * last frame in Clip4 rendered by Eevee
 
-![eevee_lighting](Project Documents/embedded_images/eevee_lighting.png)
+![eevee_lighting](Project_Documents/embedded_images/eevee_lighting.png)
 
 * last frame in Clip4 rendered by Cycles
 
-![cycles_lighting](Project Documents/embedded_images/cycles_lighting.png)
+![cycles_lighting](Project_Documents/embedded_images/cycles_lighting.png)
 
 
 
@@ -227,11 +227,11 @@ This is an attribute in "Principled BRDF" and it is shown differently in Eevee a
 
 * last frame in Clip2 rendered by Eevee
 
-![eevee_vege](Project Documents/embedded_images/eevee_vege.png)
+![eevee_vege](Project_Documents/embedded_images/eevee_vege.png)
 
 * last frame in Clip2 rendered by Cycles
 
-![cycles_vege](Project Documents/embedded_images/cycles_vege.png)
+![cycles_vege](Project_Documents/embedded_images/cycles_vege.png)
 
 The color of the subsurface in Eevee is less noticeable compared with Cycles when the subsurface mixing values are the same. This difference is related to light and path tracer Cycles provides better rendering results in terms of the subsurface. 
 
@@ -255,11 +255,11 @@ Ambient occlusion can be seen as an accessibility value that is calculated for e
 
 * Without AO in Eevee:
 
-  ![without_AO](Project Documents/embedded_images/without_AO.png)
+  ![without_AO](Project_Documents/embedded_images/without_AO.png)
 
 * With AO in Eevee:
 
-  ![with_AO](Project Documents/embedded_images/with_AO.png)
+  ![with_AO](Project_Documents/embedded_images/with_AO.png)
 
 In the AO with Eevee, objects are treated as infinitely thick, producing overshadowing if the *Distance* is really large which would not happen in Cycles. However, this is an expansive process and can slow down render significantly in Cycles.
 
@@ -271,7 +271,7 @@ This difference is most obvious in another scene "[donuts](https://github.com/CU
 
 It is hard for traditional rasterization or Eevee, in this case, to render the material like glass. To handle this kind of material under Eevee render, the "Screen Space Refraction" should be enabled in the settings of the texture. 
 
-![screen space refraction](Project Documents/embedded_images/screen space refraction.png)
+![screen space refraction](Project_Documents/embedded_images/screen space refraction.png)
 
 When this function is enabled, Blender actually set the variable ``use_screen_refraction`` for this material to true, which would use raytraced screen space refractions. Meanwhile, this would be effective only when (1) one refraction event is correctly modeled and (2) opaque and alpha hashed materials can be refracted. Therefore, it is obvious that Eevee cannot handle the glass material without using ray tracing.
 
@@ -279,11 +279,11 @@ However, even with this variable enabled, the rendering results are quite differ
 
 * Eevee
 
-![frame30_eevee](Project Documents/embedded_images/frame30_eevee.png)
+![frame30_eevee](Project_Documents/embedded_images/frame30_eevee.png)
 
 * Cycles
 
-![frame30_cycles](Project Documents/embedded_images/frame30_cycles.png)
+![frame30_cycles](Project_Documents/embedded_images/frame30_cycles.png)
 
 
 
