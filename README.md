@@ -1,5 +1,27 @@
 # C_U-Fish-Blender
+## Introduction
+
+This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)) typically in food rendering. The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
+
+
+
+** Demo Video: 
+
+* [YouTube](https://youtu.be/vy6VEb2sePE) 
+* Bilibili
+
+** Main blender files are under the folder named "[Blender FIles](https://github.com/CU2018/C_U-Fish-Blender/tree/master/CU%20Fish/Blender%20Files)"
+
+** Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project%20Documents/Project%20Logs.md) under the folder named "[Project_Documentation](https://github.com/CU2018/C_U-Fish-Blender/tree/master/Project_Documents)"
+
+** [Final Presentation Slides](https://1drv.ms/p/s!Aov0m369Nhu-i_EJln7M6PFzZDbJ8w?e=NmI8bF)
+
+
+
+## Table of Content
+
 - [Introduction](#introduction)
+- [Table of Content](#table-of-content)
 - [Hardware & Software](#hardware---software)
 - [Report: Rasterization VS. Ray Tracing -- Eevee VS. Cycles in Blender](#report--rasterization-vs-ray-tracing----eevee-vs-cycles-in-blender)
   * [Rasterization - Eevee](#rasterization---eevee)
@@ -20,20 +42,6 @@
       - [Render time](#render-time)
   * [Conclusion](#conclusion)
   * [References](#references)
-
-
-
-## Introduction
-
-This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)) typically in food rendering. The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
-
-
-
-** Main blender files are under the folder named "[Blender FIles](https://github.com/CU2018/C_U-Fish-Blender/tree/master/CU%20Fish/Blender%20Files)"
-
-** Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project%20Documents/Project%20Logs.md) under the folder named "[Project_Documentation](https://github.com/CU2018/C_U-Fish-Blender/tree/master/Project_Documents)"
-
-** [Final Presentation Slides](https://1drv.ms/p/s!Aov0m369Nhu-i_EJln7M6PFzZDbJ8w?e=NmI8bF)
 
 
 
