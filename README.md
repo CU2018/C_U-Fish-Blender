@@ -5,6 +5,10 @@ This repo contains all of the files for my individual Blender project designed f
 
 
 
+![cover](Project_Documents/embedded_images/cover.png)
+
+
+
 ** Demo Video: 
 
 * [YouTube](https://youtu.be/vy6VEb2sePE) 
@@ -91,7 +95,7 @@ According to Blender documentation, Eevee engine is a realtime render engine bui
 
 Here is a diagram which demonstrates the pipeline of OpenGL rendering:
 
-![RenderingPipeline](Project_Documents/embedded_images/RenderingPipeline.png)
+​                                                                                                    ![RenderingPipeline](Project_Documents/embedded_images/RenderingPipeline.png)
 
 ​								                                                                               [Rendering Pipeline Overview](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview)
 
