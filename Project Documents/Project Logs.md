@@ -35,7 +35,7 @@ This individual Blender is designed for illustrating the pros and cons of ray tr
     * but need to use the Decimation Master Zplugin to reduce points before importing it to Blender
     * otherwise, there would be high latency of operations in Blender
   * provide various kinds of brushes for sculpting
-  * grouping and masking function are quite helpful
+  * grouping and masking functions are quite helpful
   
 * Substance Painter:
 
@@ -465,8 +465,6 @@ Peter Shirley – Ray Tracing Book Series
        * select all other objects which are in the UV texture
        * press Shift to select the first object and then press "Ctrl+L" to select the "Material"
        * ![short_cut_material](embedded_images/short_cut_material.png)
-
-#### Adjust Subsurface parameter
 
 
 

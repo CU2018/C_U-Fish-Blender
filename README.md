@@ -1,7 +1,7 @@
 # C_U-Fish-Blender
 ## Introduction
 
-This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)). The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
+This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)) typically in food rendering. The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
 
 
 
@@ -22,7 +22,6 @@ Software:
   * Addons:
     * [MACHIN3tools](https://blendermarket.com/products/MACHIN3tools)
     * [Assessment Management](https://gumroad.com/l/asset_management)
-    * [3D Viewport Pie](https://docs.blender.org/manual/en/2.90/addons/interface/viewport_pies.html)
     * [GoB](https://archive.blender.org/wiki/index.php/Extensions:2.6/Py/Scripts/Import-Export/GoB_ZBrush_import_export/)
 * ZBrush 2020
 
@@ -112,6 +111,8 @@ In this project, the setting in Cycles looks like this:
 
 ### Outputs
 
+*** Size of all i: 1920x1080
+
 #### Clip1: 100 frames --> 160-frame animation; focal length: 100 mm
 
 * Eevee
@@ -156,11 +157,11 @@ In this project, the setting in Cycles looks like this:
 
   
 
-### Compare and Analyze Outputs
+### Compare and Analyze the Outputs
 
 #### Similarity / Premise of the comparison
 
-Before analyzing the differences between the two renders, the premise of the comparison should be pointed out. Both renders use the node named "Principle BSDF" which is based on the Disney principled model also known as the "PBR" (Physically Based Rendering) shader. Eevee materials are created using the same shader nodes as Cycles, making it easy to render existing scenes. For Cycles users, this property makes Eevee work great for previewing materials in real-time.
+Before analyzing the differences between the two renders, the premise of the comparison should be pointed out. Both renders use the node named "Principled BSDF" which is based on the Disney principled model also known as the "PBR" (Physically Based Rendering) shader. Eevee materials are created using the same shader nodes as Cycles, making it easy to render existing scenes. For Cycles users, this property makes Eevee work great for previewing materials in real-time.
 
 ![plate_mtl_nodes](Project Documents/embedded_images/plate_mtl_nodes.png)
 
@@ -212,7 +213,7 @@ To my surprise, the result in Eevee seems to be more realistic to some extent, w
 
 
 
-##### Volumetric object/effect
+##### Volumetric Object/Effect
 
 *** the two fluid effects in the project are baked and then rendered in the two renders
 
@@ -266,10 +267,10 @@ Eevee shows a significant advantage in render time compared with Cycles. Here is
 
 The GPU used in the project is RTX 3090 and it could take more time depending on the GPUs. 
 
-|        | Clip1 (100 frames) | Clip2 (100 frames) | Clip3 (70 frames) | Clip4 (30 frames) |
-| ------ | ------------------ | ------------------ | ----------------- | ----------------- |
-| Eevee  | 18min 23s          | 16min 43s          | 9min 20s          | 4min 25s          |
-| Cycles | 7h 14min           | 6h 30min           | 4h 15min          |                   |
+|        | Clip1 (100 frames) | Clip2 (100 frames) | Clip3 (70 frames) | Clip4 (30 frames) | Average  Render Time (time/frame) |
+| ------ | ------------------ | ------------------ | ----------------- | ----------------- | --------------------------------- |
+| Eevee  | 18min 23s          | 16min 43s          | 9min 20s          | 4min 25s          | 9 s/frame                         |
+| Cycles | 7h 14min           | 6h 30min           | 4h 15min          | 2h 27min          | 4.1 min/frame                     |
 
 
 
@@ -279,7 +280,7 @@ Eevee and Cycle, or more generally, rasterizations and ray tracing have their ow
 
 Nevertheless, this project still contains some minor errors, such as the fact that the textures and shading were set under the preview of Eevee instead of Cycles, special effects were not rendered properly and some of the ways to accelerate Cycles rendering time are not adapted properly. 
 
-In the future, with targeting the pros and cons of Eevee and Cycles, a more convenient and flexible add-on or even rendering engine which could combine the two techniques, rasterization and ray tracing, could be furtherly developed.
+In the future, with targeting the pros and cons of Eevee and Cycles, a more convenient and flexible add-on typically for food rendering or even rendering engine which could combine the two techniques, rasterization and ray tracing, could be furtherly developed.
 
 
 
