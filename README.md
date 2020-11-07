@@ -31,9 +31,9 @@ This repo contains all of the files for my individual Blender project designed f
 
 ** Main blender files are under the folder named "[Blender FIles](https://github.com/CU2018/C_U-Fish-Blender/tree/master/CU%20Fish/Blender%20Files)"
 
-** Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project%20Documents/Project%20Logs.md) under the folder named "[Project Documentation](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/tree/master/Project%20Documents)"
+** Detailed development logs are recorded in [Project Logs](https://github.com/CU2018/C_U-Fish-Blender-Ray-Tracing/blob/master/Project%20Documents/Project%20Logs.md) under the folder named "[Project_Documentation](https://github.com/CU2018/C_U-Fish-Blender/tree/master/Project_Documents)"
 
-** Final Presentation Slides
+** [Final Presentation Slides](https://1drv.ms/p/s!Aov0m369Nhu-i_EJln7M6PFzZDbJ8w?e=NmI8bF)
 
 
 
@@ -163,7 +163,7 @@ In this project, the setting in Cycles looks like this:
 
 * Eevee
 
-  ![eevee_v2_animation3](Project_Documents/embedded_images/eevee_v2_animation3.gif)
+  <img src="Project_Documents/embedded_images/eevee_v2_animation3.gif" alt="eevee_v2_animation3" style="zoom: 200%;" />
 
 * Cycles
 
