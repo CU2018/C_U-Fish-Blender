@@ -164,7 +164,7 @@ Peter Shirley – Ray Tracing Book Series
     * The plate of the grilled fish
 * Reference
 
-![fish (2)](embedded_images/fish (2).jpg)
+![fish(2)](embedded_images/fish(2).jpg)
 
 * Modeling for this week: Finished basic model of the plate
 
@@ -194,14 +194,14 @@ Peter Shirley – Ray Tracing Book Series
 * Sculpting the fish with ZBrush and then imported it into Blender with an add-on
   * ![zbrush_fish1](embedded_images/zbrush_fish1.png)
   * ![zbrush_fish2](embedded_images/zbrush_fish2.png)
-  * ![Fish Sculpt](embedded_images/Fish Sculpt.gif)
+  * ![Fish_Sculpt](embedded_images/Fish_Sculpt.gif)
 
 #### Update: UV and Texture
 
 * Unwrap the UVs of the models for texture painting
   * ![plate3](embedded_images/plate3.png)
 * Using Substance Painter to paint the textures
-  * ![plate texture](embedded_images/plate texture.png)
+  * ![plate_texture](embedded_images/plate_texture.png)
   * ![plate_with_texture](embedded_images/plate_with_texture.png)
   * ![fish_with_texture](embedded_images/fish_with_texture.png)
 
@@ -410,7 +410,7 @@ Peter Shirley – Ray Tracing Book Series
 
 * I chose a fireplace HDRI for having a warm color tone of the scene
 
-  * ![hdri setup](embedded_images/hdri setup.png)
+  * ![hdri_setup](embedded_images/hdri_setup.png)
 
     
 
@@ -537,9 +537,9 @@ Peter Shirley – Ray Tracing Book Series
 * Examples:
 
   * Rigid Body used for the lowest layer of vegetables
-  * ![Rigid Body Animation1](embedded_images/Rigid Body Animation1.gif)
+  * ![RigidBodyAnimation1](embedded_images/RigidBodyAnimation1.gif)
   * Rigid Body used for the upper layer of vegetables
-  * ![Rigid Body Animation2](embedded_images/Rigid Body Animation2.gif)
+  * ![RigidBodyAnimation2](embedded_images/RigidBodyAnimation2.gif)
 
   
 
