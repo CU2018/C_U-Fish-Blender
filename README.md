@@ -1,7 +1,7 @@
 # C_U-Fish-Blender
 ## Introduction
 
-This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses with rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)) typically in food rendering. The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
+This repo contains all of the files for my individual Blender project designed for illustrating the pros and cons of ray tracing (with [Cycles Engine](https://www.cycles-renderer.org/)), as well as  strengths and weaknesses of rasterization (with [Eevee](https://docs.blender.org/manual/en/latest/render/eevee/index.html)) typically in food rendering. The main model in this project is a Chinese dish - grilled fish. The processes of modeling, sculpting, UV layout, texturing, lighting and rendering (images and animations) were all finished with **Blender**. Some of the sculpting (the fish) and texturing were assisted and finished in **ZBrush** (for sculpting) and **Substance Painter** (for texturing). 
 
 
 
@@ -318,7 +318,7 @@ Eevee and Cycle, or more generally, rasterizations and ray tracing have their ow
 
 Nevertheless, this project still contains some minor errors, such as the fact that the textures and shading were set under the preview of Eevee instead of Cycles, special effects were not rendered properly and some of the ways to accelerate Cycles rendering time are not adapted properly. 
 
-In the future, with targeting the pros and cons of Eevee and Cycles, a more convenient and flexible add-on typically for food rendering or even rendering engine which could combine the two techniques, rasterization and ray tracing, could be furtherly developed.
+In the future, with targeting the pros and cons of Eevee and Cycles, a more convenient and flexible add-on typically for food rendering or even rendering engine which could combine the two techniques (rasterization and ray tracing) could be furtherly developed.
 
 
 
