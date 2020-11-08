@@ -12,7 +12,7 @@ This repo contains all of the files for my individual Blender project designed f
 ** Demo Video: 
 
 * [YouTube](https://youtu.be/vy6VEb2sePE) 
-* Bilibili
+* [Bilibili](https://www.bilibili.com/video/BV1xf4y1q72F/)
 
 ** Main blender files are under the folder named "[Blender FIles](https://github.com/CU2018/C_U-Fish-Blender/tree/master/CU%20Fish/Blender%20Files)"
 
