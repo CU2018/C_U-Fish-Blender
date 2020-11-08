@@ -7,6 +7,10 @@ This repo contains all of the files for my individual Blender project designed f
 
 ![cover](Project_Documents/embedded_images/cover.png)
 
+Statistics: 
+
+![statistics](Project_Documents/embedded_images/statistics.png)
+
 
 
 ** Demo Video: 
