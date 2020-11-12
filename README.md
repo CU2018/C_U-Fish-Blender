@@ -47,7 +47,7 @@ Statistics:
       - [Subsurface](#subsurface)
       - [Volumetric Object/Effect](#volumetric-object-effect)
       - [Ambient Occlusion / Indirect Shadows](#ambient-occlusion---indirect-shadows)
-      - [Surface Reflection](#surface-reflection)
+      - [Refraction](#Refraction)
       - [Render time](#render-time)
   * [Conclusion](#conclusion)
   * [References](#references)
@@ -234,8 +234,6 @@ In the two frames below, we could see that the background is noticeable and brig
 
 * last frame in Clip4 rendered by Cycles
 
-![cycles_lighting](Project_Documents/embedded_images/cycles_lighting.png)
-
 
 
 ##### Subsurface
@@ -282,7 +280,7 @@ In the AO with Eevee, objects are treated as infinitely thick, producing oversha
 
 
 
-##### Surface Reflection
+##### Refraction
 
 This difference is most obvious in another scene "[donuts](https://github.com/CU2018/C_U-Fish-Blender/tree/master/Donut)" in this project. There is a cup of coffee in this scene and the cup is made of glass. 
 
